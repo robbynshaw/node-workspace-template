@@ -2,12 +2,22 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
-	"name": "Node.js",
+	"name": "Node.js + Yarn + React + Tailwind + NX",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+	// "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+  "features": {
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "version": "latest",
+      "enableNonRootDocker": true,
+      "moby": true
+    }
+  },
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -15,7 +25,11 @@
 		"vscode": {
 			"settings": {},
 			"extensions": [
-				"streetsidesoftware.code-spell-checker"
+				"streetsidesoftware.code-spell-checker",
+				"esbenp.prettier-vscode",
+				"nrwl.angular-console",
+    "ms-playwright.playwright",
+    "firsttris.vscode-jest-runner"
 			]
 		}
 	},

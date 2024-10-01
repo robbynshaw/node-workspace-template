@@ -1,0 +1,9 @@
+{
+  "name": "node-template-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/node-template-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["node-template"],
+  "// targets": "to see all targets run: nx show project node-template-e2e --web",
+  "targets": {}
+}
